@@ -1,0 +1,25 @@
+header{
+    background-color: $dark-primary;
+    padding: 1rem 0;
+    color: #fff;
+    .languages{
+        background-color: $dark-primary;
+        select{
+            background-color: transparent !important;
+            background: $dark-primary;
+            -webkit-appearance: none;
+            color: $light-primary;
+            padding: 0.5625rem 2.5rem 0.5625rem 0.9375rem;
+            border: 1px solid rgba($light-primary, 0.5);
+            transition: border-color 0.2s ease 0s;
+            border-radius: 6.25rem;
+            option{
+                background-color: $dark-primary;
+            }
+            &:hover{
+                border-color: rgba($light-primary, 1);
+                outline: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+$primary: #232A33;
+$dark-primary: #1A212A;
+$light-primary: #86A6A2;
+$accent: #66E59E;
+// $grid-columns: 14;
+$grid-gutter-width: 20px;
+// $secondary: $light-primary;
+$light-gray: #f5f7fa;
+$theme-colors: (
+  "primary": $primary,
+  "dark-primary": $dark-primary,
+  "light-primary": $light-primary,
+  "accent" : $accent,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1180px
+);
+@mixin transition($value){
+  transition: $value;
+  -moz-transition: $value;
+  -webkit-transition: $value;
+  -o-transition: $value;
+}

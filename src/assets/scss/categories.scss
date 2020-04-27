@@ -1,0 +1,34 @@
+.categories{
+    width: 100%;
+    overflow: hidden;
+    .categories-wrapper{
+        width: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        overflow: auto;
+        .category{
+            width: 56px;
+            margin-right: 10px;
+            .icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 56px;
+                height: 56px;
+                background: $dark-primary;
+                padding: 1rem;
+                border-radius: 25%;
+            }
+            .name{
+                font-size: 0.6875rem;
+                white-space: normal;
+                overflow-wrap: break-word;
+                text-align: center;
+                line-height: 1rem;
+                margin-top: 0.5rem;
+                letter-spacing: -0.1px;
+            }
+        }
+    }
+}
