@@ -23,3 +23,36 @@ header{
         }
     }
 }
+.home-heading-section{
+    padding: 1.5rem 0px;
+    .partners{
+        .partner{
+            flex-basis: 9.625rem;
+            padding: 0px 1rem;
+            border-right: 1px solid rgb(49, 55, 63);
+            svg{
+                width: 50px;
+            }
+            span{  
+                margin-left: 1rem;
+                font-size: 0.75rem;
+                line-height: 1rem;
+                color: $light-primary;
+            }
+        }
+    }
+    .actions{
+        .btn{
+            padding: 0.75rem 2.5rem;
+        }
+        .sign-in{
+            color: #86a297;
+            &:hover{
+                color: #fff;
+            }
+        }
+        .register{
+            color: #fff;
+        }
+    }
+}

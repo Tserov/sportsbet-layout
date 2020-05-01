@@ -2,6 +2,7 @@ $primary: #232A33;
 $dark-primary: #1A212A;
 $light-primary: #86A6A2;
 $accent: #66E59E;
+$dark_gray: #31373F;
 // $grid-columns: 14;
 $grid-gutter-width: 20px;
 // $secondary: $light-primary;
@@ -11,6 +12,7 @@ $theme-colors: (
   "dark-primary": $dark-primary,
   "light-primary": $light-primary,
   "accent" : $accent,
+  "dark-gray": $dark_gray,
 );
 $container-max-widths: (
   sm: 540px,
@@ -18,6 +20,16 @@ $container-max-widths: (
   lg: 960px,
   xl: 1180px
 );
+//buttons
+$btn-font-weight: 600;
+$btn-font-size: 0.875rem;
+$btn-line-height:1.0625rem;
+$btn-border-radius: 6.25rem;
+$btn-padding-y:0.5rem;
+$btn-padding-x: 2rem;
+$btn-focus-box-shadow: none !important;
+
+//mixins
 @mixin transition($value){
   transition: $value;
   -moz-transition: $value;

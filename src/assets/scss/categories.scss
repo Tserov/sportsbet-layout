@@ -1,13 +1,7 @@
 .categories{
     width: 100%;
     overflow: hidden;
-    .categories-wrapper{
-        width: auto;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        overflow: auto;
-        .category{
+    .category{
             width: 56px;
             margin-right: 10px;
             .icon{
@@ -19,6 +13,7 @@
                 background: $dark-primary;
                 padding: 1rem;
                 border-radius: 25%;
+                text-align: center;
             }
             .name{
                 font-size: 0.6875rem;
@@ -29,6 +24,23 @@
                 margin-top: 0.5rem;
                 letter-spacing: -0.1px;
             }
+    }
+}
+.popular-games{
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgb(49, 55, 63);
+    .popular-item{
+        & > div{
+            width: 15.75rem;
+        }
+        .image{
+            position: relative;
+            height: 6rem;
+            width: 6rem;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            overflow: hidden;
         }
     }
 }
