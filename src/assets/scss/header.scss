@@ -56,10 +56,15 @@ header{
             color: $gray;
             &:hover{
                 color: #fff;
+                background-color: $dark_gray;
+                border-color: $dark_gray;
             }
         }
         .register{
             color: #fff;
+            &:hover{
+                background-color: rgb(102, 229, 158);
+            }
         }
     }
     &.fixed-login{

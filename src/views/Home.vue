@@ -40,8 +40,7 @@
 
     <div class="categories my-3">
         <HorizontalScrollSection heading="Sport Categories">
-          <div v-for="(category, index) in sportCategories"
-               :key="index"
+          <div v-for="(category, index) in sportCategories" :key="index"
                class="category">
             <div class="icon" v-html="category.svg">
             </div>
@@ -54,8 +53,7 @@
 
     <div class="popular-games my-3">
         <HorizontalScrollSection heading="Popular">
-          <div v-for="(game, index) in popularGames"
-             :key="index"
+          <div v-for="(game, index) in popularGames" :key="index"
              class="popular-item">
              <div class="d-flex align-items-center justify-content-start ">
                 <div class="image mr-3">
@@ -69,9 +67,7 @@
 
     <div class="promotions my-3">
         <HorizontalScrollSection heading="Exciting promotions start here">
-          <div v-for="(promo, index)
-                in promotions"
-             :key="index"
+          <div v-for="(promo, index) in promotions" :key="index"
              class="promotion-item">
              <div class="d-flex align-items-center justify-content-start">
                <div class="content">
@@ -95,8 +91,7 @@
 
     <div class="game-providers my-3">
         <HorizontalScrollSection heading="Game Providers">
-          <div v-for="(provider, index) in gameProviders"
-             :key="index"
+          <div v-for="(provider, index) in gameProviders" :key="index"
              class="provider-item">
              <div class="d-flex align-items-center justify-content-center">
                 <div class="image">
@@ -110,7 +105,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Banner from '@/components/Banner.vue';
 import HorizontalScrollSection from '@/components/HorizontalScrollSection.vue';
 import data from '@/assets/JSON/data.json';
