@@ -1,9 +1,9 @@
 <template>
     <div>
         <h2 class="section-title">{{heading}}</h2>
-        <vue-custom-scrollbar class="scroll-area container"
+        <vue-custom-scrollbar class="scroll-area container px-0"
                               :settings="settings" @ps-scroll-y="scrollHanle">
-                              <div class="d-flex py-2">
+                              <div class="d-flex pb-3 pt-2">
                                 <slot></slot>
                               </div>
         </vue-custom-scrollbar>

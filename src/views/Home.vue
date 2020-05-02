@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-    <div class="container home-heading-section d-sm-none d-md-block">
+    <div class="container home-heading-section d-none d-xl-block">
       <div class="row">
         <div class="col-md-6 d-flex align-items-center justify-content-start partners">
           <div class="d-flex align-items-center justify-content-start partner">
@@ -22,7 +22,12 @@
       </div>
     </div>
 
-    <div class="banners d-flex justify-content-between">
+    <div class="home-heading-section fixed-login d-xl-none d-md-none d-xs-block">
+        <button class="btn btn-dark-gray mr-4 sign-in">Sign In</button>
+        <button class="btn btn-accent register">Register</button>
+    </div>
+
+    <div class="banners mt-4 d-flex justify-content-between flex-wrap">
       <Banner title="SPORTS"
               content="Price Boost every day on all sports"
               buttonText="Go to Sports"
@@ -33,26 +38,23 @@
               backgroundImage="card-casino4.png"/>
     </div>
 
-    <div class="categories my-4">
+    <div class="categories my-3">
         <HorizontalScrollSection heading="Sport Categories">
-          <div v-for="(item, index)
-                in [3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]"
-             :key="index"
-             class="category">
-            <div class="icon">
-              <svg width="1em" height="1em" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" color="#9182DE" class="IconSportsESports-sc-8p92os-0 fzHjzv"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.59 10.647h.82c1.802 0 3.48.891 4.488 2.385l.098.146a1.63 1.63 0 0 0 2.666.054l.053-.07a1.62 1.62 0 0 0 .317-.968v-.934c0-2.862-.64-5.746-1.852-8.34a1.42 1.42 0 0 0-1.282-.816h-.26c-.4 0-.782.17-1.05.465a2.547 2.547 0 0 1-1.882.835H8.295a2.545 2.545 0 0 1-1.883-.835 1.419 1.419 0 0 0-1.05-.465h-.26c-.547 0-1.05.32-1.282.817a19.838 19.838 0 0 0-1.851 8.34v.934c0 .35.11.684.318.967l.052.071a1.629 1.629 0 0 0 2.665-.056l.098-.145a5.408 5.408 0 0 1 4.488-2.385zm6.758 4.374a2.753 2.753 0 0 1-2.284-1.214l-.099-.146a4.285 4.285 0 0 0-3.555-1.889h-.82a4.285 4.285 0 0 0-3.555 1.89l-.098.145a2.752 2.752 0 0 1-2.285 1.214c-.872 0-1.702-.419-2.22-1.121l-.052-.071a2.74 2.74 0 0 1-.537-1.635v-.934c0-3.026.677-6.074 1.958-8.816A2.55 2.55 0 0 1 5.103.98h.26c.716 0 1.402.304 1.882.834.268.296.651.465 1.05.465h3.41c.4 0 .782-.17 1.05-.465A2.545 2.545 0 0 1 14.638.98h.26A2.55 2.55 0 0 1 17.2 2.444a20.971 20.971 0 0 1 1.957 8.816v.934c0 .593-.186 1.158-.537 1.635l-.053.071a2.767 2.767 0 0 1-2.219 1.121z" fill="currentColor"></path></svg>
+          <div v-for="(category, index) in sportCategories"
+               :key="index"
+               class="category">
+            <div class="icon" v-html="category.svg">
             </div>
             <div class="name">
-              eSoccer
+              {{category.name}}
             </div>
           </div>
         </HorizontalScrollSection>
     </div>
 
-    <div class="popular-games my-4">
+    <div class="popular-games my-3">
         <HorizontalScrollSection heading="Popular">
-          <div v-for="(game, index)
-                in popularGames"
+          <div v-for="(game, index) in popularGames"
              :key="index"
              class="popular-item">
              <div class="d-flex align-items-center justify-content-start ">
@@ -64,6 +66,46 @@
           </div>
         </HorizontalScrollSection>
     </div>
+
+    <div class="promotions my-3">
+        <HorizontalScrollSection heading="Exciting promotions start here">
+          <div v-for="(promo, index)
+                in promotions"
+             :key="index"
+             class="promotion-item">
+             <div class="d-flex align-items-center justify-content-start">
+               <div class="content">
+                 <h4>
+                   {{promo.title}}
+                 </h4>
+                 <p>
+                   {{promo.content}}
+                 </p>
+               </div>
+                <div class="image">
+                  <img :src="`/images/${promo.image}`">
+                  <span class="promo-icon">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" font-size="1.5rem" color="#FFAB00" class="IconStarFlag-sc-1cd7wcx-0 cpdeXN"><path d="M2 0h20v24l-10-3-10 3V0z" fill="currentColor"></path><path d="M10.705 9.121c-.049.2-.194.3-.388.35-.824.05-1.454.15-1.94.249-.339.05-.484.5-.29.749.34.399.776.948 1.406 1.447.145.1.242.3.194.5-.097.448-.291 1.247-.388 2.045-.049.35.34.6.63.5.63-.25 1.552-.7 2.036-1.098.485.399 1.455.798 2.037 1.098.34.15.678-.15.63-.5a8.923 8.923 0 0 0-.388-2.046c-.048-.2 0-.4.194-.499.582-.45 1.067-1.048 1.406-1.447.29-.25.146-.65-.194-.749-.436-.1-1.115-.2-1.94-.25-.193 0-.339-.15-.436-.299-.096-.45-.387-1.198-.824-1.946a.49.49 0 0 0-.824 0 9.685 9.685 0 0 0-.921 1.896z" fill="#fff"></path></svg>
+                  </span>
+                </div>
+            </div>
+          </div>
+        </HorizontalScrollSection>
+    </div>
+
+    <div class="game-providers my-3">
+        <HorizontalScrollSection heading="Game Providers">
+          <div v-for="(provider, index) in gameProviders"
+             :key="index"
+             class="provider-item">
+             <div class="d-flex align-items-center justify-content-center">
+                <div class="image">
+                  <img :src="`/images/${provider.image}`">
+                </div>
+            </div>
+          </div>
+        </HorizontalScrollSection>
+    </div>
   </div>
 </template>
 
@@ -71,6 +113,7 @@
 // @ is an alias to /src
 import Banner from '@/components/Banner.vue';
 import HorizontalScrollSection from '@/components/HorizontalScrollSection.vue';
+import data from '@/assets/JSON/data.json';
 
 export default {
   name: 'Home',
@@ -80,30 +123,17 @@ export default {
   },
   data() {
     return {
-      popularGames: [
-        {
-          name: 'Live dealer',
-          img: 'product_card-livecasino.jpg',
-        },
-        {
-          name: 'Poker',
-          img: 'product_card-poker.jpg',
-        },
-        {
-          name: 'Bombay Club',
-          img: 'product_card-bombayclub2.png',
-        },
-        {
-          name: 'Promotions',
-          img: 'product_card-promotions.jpg',
-        },
-        {
-          name: 'Support',
-          img: 'product_card-livechat.jpg',
-        },
-      ],
-      categories: [1, 2, 34, 4, 6, 7, 88, 4, 4, 4, 4, 44, 4],
+      sportCategories: [],
+      popularGames: [],
+      promotions: [],
+      gameProviders: [],
     };
+  },
+  mounted() {
+    this.sportCategories = data.categories;
+    this.popularGames = data.popularGames;
+    this.promotions = data.promotions;
+    this.gameProviders = data.gameProviders;
   },
 };
 </script>

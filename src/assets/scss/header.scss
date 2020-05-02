@@ -10,31 +10,37 @@ header{
             -webkit-appearance: none;
             color: $light-primary;
             padding: 0.5625rem 2.5rem 0.5625rem 0.9375rem;
-            border: 1px solid rgba($light-primary, 0.5);
+            border: 1px solid rgba($light-primary, 0.4);
             transition: border-color 0.2s ease 0s;
             border-radius: 6.25rem;
             option{
                 background-color: $dark-primary;
             }
+            &:focus{
+                outline: none;
+                border-color: rgba($light-primary, .1);
+            }
             &:hover{
-                border-color: rgba($light-primary, 1);
                 outline: none;
             }
         }
     }
 }
 .home-heading-section{
-    padding: 1.5rem 0px;
+    padding-top: 1.5rem;
     .partners{
         .partner{
             flex-basis: 9.625rem;
             padding: 0px 1rem;
             border-right: 1px solid rgb(49, 55, 63);
+            &:first-child{
+                padding-left: 0;
+            }
             svg{
                 width: 50px;
             }
             span{  
-                margin-left: 1rem;
+                margin-left: 0.5rem;
                 font-size: 0.75rem;
                 line-height: 1rem;
                 color: $light-primary;
@@ -43,10 +49,11 @@ header{
     }
     .actions{
         .btn{
+            font-size: 16px;
             padding: 0.75rem 2.5rem;
         }
         .sign-in{
-            color: #86a297;
+            color: $gray;
             &:hover{
                 color: #fff;
             }
@@ -55,4 +62,61 @@ header{
             color: #fff;
         }
     }
+    &.fixed-login{
+        z-index: 9999;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: $dark-primary;
+        box-shadow: rgba(0, 0, 0, 0.216) 0px -1.2px 3.6px, rgba(0, 0, 0, 0.263) 0px -6.4px 14.4px;
+        border-radius: 1rem 1rem 0px 0px;
+        padding: 1rem;
+        display: flex;
+        .btn{
+            flex: 1;
+            padding: 0.75rem 2.5rem;
+            font-size: 1rem;
+        }
+    }
+}
+@media only screen and(max-width: 1155px){
+    header{
+        border-radius: 0px 0px 1rem 1rem;
+        .container{
+            max-width: 100%;
+        }
+        .languages{
+            select{
+                option{
+                }
+                &:focus{
+                }
+                &:hover{
+                }
+            }
+        }
+    }
+    .home-heading-section{
+        .partners{
+            .partner{
+                &:first-child{
+                }
+                svg{
+                }
+                span{
+                }
+            }
+        }
+        .actions{
+            .btn{
+            }
+            .sign-in{
+                &:hover{
+                }
+            }
+            .register{
+            }
+        }
+    } 
 }

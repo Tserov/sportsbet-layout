@@ -1,12 +1,14 @@
 $primary: #232A33;
 $dark-primary: #1A212A;
 $light-primary: #86A6A2;
-$accent: #66E59E;
+$accent: #0CD664;
 $dark_gray: #31373F;
 // $grid-columns: 14;
 $grid-gutter-width: 20px;
 // $secondary: $light-primary;
 $light-gray: #f5f7fa;
+$gray: #86a297;
+
 $theme-colors: (
   "primary": $primary,
   "dark-primary": $dark-primary,
@@ -16,9 +18,9 @@ $theme-colors: (
 );
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
+  md: 800px,
   lg: 960px,
-  xl: 1180px
+  xl: 1155px
 );
 //buttons
 $btn-font-weight: 600;
